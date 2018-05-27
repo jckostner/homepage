@@ -2,14 +2,15 @@
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" type="text/css" href="test.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" type="text/css" href="font\weather-icons.min.css">
         <link rel="stylesheet" type="text/css" href="font\weather-icons-wind.min.css">
         <link rel="stylesheet" type="font" href="font\weathericons-regular-webfont.ttf">
-        
+        <script src="weather.js"></script>
+        <script src="ether.js"></script>
+        <script src="jquery-3.3.1.js"></script>
     </head>
     <body>
-        <script src = "weather.js"></script>
         <div id="main">
             <div id="weather">
                 <div id="internal">
@@ -21,9 +22,10 @@
                             <div id="temp"></div>
                         </div>
                         <div id="misc">
-                            <div id="pressureLabel">Pressure: </div><div id="pressure"></div>
-                            <div id="humidLabel">Humidity: </div><div id="humid"></div>
-                            <div id="windLabel">Wind: </div><div id="wind"></div>
+                            <div id="precipLabel" class="labels">Precipitation: </div><div id="precip"></div>
+                            <div id="pressureLabel" class="labels">Pressure: </div><div id="pressure"></div>
+                            <div id="humidLabel" class="labels">Humidity: </div><div id="humid"></div>
+                            <div id="windLabel" class="labels">Wind: </div><div id="wind"></div>
                             <div id="windIcon"></div>
                         </div>
                     </div>
@@ -62,6 +64,21 @@
                     </div>
                 </div>
             </div>
+            <div id="ether">
+                <div id="ethContents">
+                    <div id="currentPrice">
+                        <div id="etherLabel">ETH: </div>
+                        <div id="price"></div>
+                    </div>
+                    <div id="hourPrice">
+                        <div id="priceHighLabel" class="priceLabels">High: 
+                        </div><div id="priceHigh" class="subPrice"></div>
+                        <div id="priceLowLabel" class="priceLabels">Low: 
+                        </div><div id="priceLow" class="subPrice"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div id="centerMain"></div>
     </body>
 </html>

@@ -44,7 +44,10 @@ function printTimeFromUnix(unixTime) {
         min = "0" + min;
     }
 
-    if (hour < 12) {
+    if (hour === 0 || hour === 24) {
+        hour = 12;
+        timeOfDay = 'AM';
+    } else if (hour < 12) {
         timeOfDay = 'AM';
     } else {
         timeOfDay = 'PM';
@@ -72,7 +75,7 @@ var locRequest = new Request(locUrl, { method: 'POST' });
 
 fetch(locRequest).then(response => {
     if (response.status === 200) {
-        response.json().then(json => {     
+        response.json().then(json => {
             mapsRequestUrl = `${mapsUrl}latlng=${json.location.lat},${json.location.lng}&key=${
                 googleMapsApiKey}`;
 
@@ -95,14 +98,15 @@ fetch(locRequest).then(response => {
                                 response.json().then(json => {
                                     document.getElementById("temp").innerHTML =
                                         `${Math.round(json.currently.temperature)}\u2103`;
+                                    document.getElementById("precip").innerHTML = 
+                                        `${Math.round(json.currently.precipProbability * 100)} perc`
                                     document.getElementById("pressure").innerHTML = `${parseFloat(
                                         json.currently.pressure / 33.86).toFixed(2)} inhg`;
-                                    document.getElementById("humid").innerHTML = `${json.currently.humidity 
-                                        * 100} perc`;
-                                    document.getElementById("wind").innerHTML = `${getCardinalDir(
-                                        json.currently.windBearing)} @ ${parseFloat(json.currently.windSpeed
-                                        )}&nbsp;&nbsp;mph`;
-                                    document.getElementById("windIcon").innerHTML = 
+                                    document.getElementById("humid").innerHTML =
+                                        `${Math.round(json.currently.humidity * 100)} perc`;
+                                    document.getElementById("wind").innerHTML = `${parseFloat(
+                                        json.currently.windSpeed)}&nbsp;&nbsp;mph`;
+                                    document.getElementById("windIcon").innerHTML =
                                         `<i class="wi wi-wind from-${json.currently.windBearing
                                         }-deg"></i>`;
                                     document.getElementById("time").innerHTML =
@@ -114,14 +118,14 @@ fetch(locRequest).then(response => {
                                     for(i = 1; i <= 5; i++) {
                                         var prefix = json.daily.data;
 
-                                        document.getElementById(`day${i}Icon`).innerHTML = 
+                                        document.getElementById(`day${i}Icon`).innerHTML =
                                             `<i class="wi wi-forecast-io-${prefix[i].icon}"></i>`;
-                                        document.getElementById(`day${i}Date`).innerHTML = 
+                                        document.getElementById(`day${i}Date`).innerHTML =
                                             printDateFromUnix(prefix[i].time);
-                                        document.getElementById(`day${i}High`).innerHTML = 
-                                            Math.round(prefix[i].temperatureHigh);
-                                        document.getElementById(`day${i}Low`).innerHTML = 
-                                            Math.round(prefix[i].temperatureLow);
+                                        document.getElementById(`day${i}High`).innerHTML =
+                                            `${Math.round(prefix[i].temperatureHigh)}&deg;`;
+                                        document.getElementById(`day${i}Low`).innerHTML =
+                                            `${Math.round(prefix[i].temperatureLow)}&deg;`;
                                     }
                                 });
                             } else {
