@@ -1,6 +1,6 @@
 body {
     background-color: #3b3b3b;
-    background-image: url("background.jpeg");
+    background-image: url("../background.jpeg");
     color: #ffffff;
 
     text-align: center;
@@ -78,7 +78,7 @@ div.subPrice {
 
 @font-face {
     font-family: weatherIcons;
-    src: url(weather_icons/weathericons-regular-webfont.ttf);
+    src: url(../fonts/weathericons-regular-webfont.ttf);
 }
 
 #centerMain {

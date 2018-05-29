@@ -1,0 +1,14 @@
+body {
+    background-image: url("../background.jpeg");
+    color: #ffffff;
+}
+
+#icon {
+    font-size: 100px;
+}
+
+#name {
+    font-size: 28px;
+    font-weight: bold;
+}
+

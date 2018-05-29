@@ -1,84 +1,98 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" type="text/css" href="font\weather-icons.min.css">
-        <link rel="stylesheet" type="text/css" href="font\weather-icons-wind.min.css">
-        <link rel="stylesheet" type="font" href="font\weathericons-regular-webfont.ttf">
-        <script src="weather.js"></script>
-        <script src="ether.js"></script>
-        <script src="jquery-3.3.1.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="font/weather-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="font/weather-icons-wind.min.css">
+        <link rel="stylesheet" type="font" href="font/weathericons-regular-webfont.ttf">
+        <script src="scripts/weather.js"></script>
+        <script src="scripts/ether.js"></script>
     </head>
-    <body>
-        <div id="main">
-            <div id="weather">
-                <div id="internal">
-                    <div id="icon"></div>
-                    <div id="contents">
-                        <div id="current">
-                            <div id="name"></div>
-                            <div id="coords"></div>
-                            <div id="temp"></div>
+    <body style="background-image: url('background.jpeg'); color: #ffffff;">
+        <div class="container" id="top-level">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 text-center" id="icon" style="font-size: 100px"></div>
+                    <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-xs text-left d-flex flex-column justify-content-center">
+                                <div id="name" style="font-size: 28px; font-weight: bold;
+                                                      line-height: 28px;"></div>
+                                <div id="coords" style="font-size: 12px; line-height: 12px;"></div>
+                                <div id="temp" style="font-size: 64px; line-height: 64px;"></div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-xs">
+                                        <div class="text-left" id="precipLabel">Precipitation: </div>
+                                    </div>
+                                    <div class="col-xs">
+                                        <div class="text-right" id="precip"></div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-xs">
+                                        <div class="text-left" id="pressureLabel">Pressure: </div>
+                                    </div>
+                                    <div class="col-xs">
+                                        <div class="text-right" id="pressure"></div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-xs">
+                                        <div class="text-left" id="humidLabel">Humidity: </div>
+                                    </div>
+                                    <div class="col-xs">
+                                        <div class="text-right" id="humid"></div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-xs">
+                                        <div class="text-left" id="windLabel">Wind: </div>
+                                    </div>
+                                    <div class="col-xs">
+                                        <div class="text-right" id="wind"></div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-xs"></div>
+                                    <div class="col-xs">
+                                        <div class="text-left" id="windIcon"></div>
+                                    </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div id="time"></div>
                         </div>
-                        <div id="misc">
-                            <div id="precipLabel" class="labels">Precipitation: </div><div id="precip"></div>
-                            <div id="pressureLabel" class="labels">Pressure: </div><div id="pressure"></div>
-                            <div id="humidLabel" class="labels">Humidity: </div><div id="humid"></div>
-                            <div id="windLabel" class="labels">Wind: </div><div id="wind"></div>
-                            <div id="windIcon"></div>
-                        </div>
-                    </div>
-                    <div id="time"></div>
-                </div>
-                <div id="future">
-                    <div id="day1" class="days">
-                        <div id="day1Icon" class="dayIcons"></div>
-                        <div id="day1High" class="dayHighs"></div>
-                        <div id="day1Low" class="dayLows"></div>
-                        <div id="day1Date" class="dayDates"></div>
-                    </div>
-                    <div id="day2" class="daysInt">
-                        <div id="day2Icon" class="dayIcons"></div>
-                        <div id="day2High" class="dayHighs"></div>
-                        <div id="day2Low" class="dayLows"></div>
-                        <div id="day2Date" class="dayDates"></div>
-                    </div>
-                    <div id="day3" class="daysInt">
-                        <div id="day3Icon" class="dayIcons"></div>
-                        <div id="day3High" class="dayHighs"></div>
-                        <div id="day3Low" class="dayLows"></div>
-                        <div id="day3Date" class="dayDates"></div>
-                    </div>
-                    <div id="day4" class="daysInt">
-                        <div id="day4Icon" class="dayIcons"></div>
-                        <div id="day4High" class="dayHighs"></div>
-                        <div id="day4Low" class="dayLows"></div>
-                        <div id="day4Date" class="dayDates"></div>
-                    </div>
-                    <div id="day5" class="days">
-                        <div id="day5Icon" class="dayIcons"></div>
-                        <div id="day5High" class="dayHighs"></div>
-                        <div id="day5Low" class="dayLows"></div>
-                        <div id="day5Date" class="dayDates"></div>
-                    </div>
-                </div>
-            </div>
-            <div id="ether">
-                <div id="ethContents">
-                    <div id="currentPrice">
-                        <div id="etherLabel">ETH: </div>
-                        <div id="price"></div>
-                    </div>
-                    <div id="hourPrice">
-                        <div id="priceHighLabel" class="priceLabels">High: 
-                        </div><div id="priceHigh" class="subPrice"></div>
-                        <div id="priceLowLabel" class="priceLabels">Low: 
-                        </div><div id="priceLow" class="subPrice"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="centerMain"></div>
+        <div id="day1Icon"></div>
+        <div id="day1High"></div>
+        <div id="day1Low"></div>
+        <div id="day1Date"></div>
+        <div id="day2Icon"></div>
+        <div id="day2High"></div>
+        <div id="day2Low"></div>
+        <div id="day2Date"></div>
+        <div id="day3Icon"></div>
+        <div id="day3High"></div>
+        <div id="day3Low"></div>
+        <div id="day3Date"></div>
+        <div id="day4Icon"></div>
+        <div id="day4High"></div>
+        <div id="day4Low"></div>
+        <div id="day4Date"></div>
+        <div id="day5Icon"></div>
+        <div id="day5High"></div>
+        <div id="day5Low"></div>
+        <div id="day5Date"></div>
+        <div id="etherLabel">ETH: </div>
+        <div id="price"></div>
+        <div id="priceHighLabel">High: </div><div id="priceHigh"></div>
+        <div id="priceLowLabel">Low: </div><div id="priceLow"></div>
+
+        <script src="libs/jquery-3.3.1.js"></script>
+        <script src="libs/popper.min.js"></script>
+        <script src="libs/bootstrap.min.js"></script>
     </body>
 </html>
