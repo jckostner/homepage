@@ -83,8 +83,8 @@ fetch(locRequest).then(response => {
             fetch(request).then(response => {
                 if (response.status === 200) {
                     response.json().then(json => {
-                        document.getElementById("name").innerHTML = getCityAndState(json);
-                        document.getElementById("coords").innerHTML =
+                        document.getElementById("city-name").innerHTML = getCityAndState(json);
+                        document.getElementById("city-coords").innerHTML =
                                 `Long: ${json.results[0].geometry.location.lng.toFixed(2)},
                                 Lat: ${json.results[0].geometry.location.lat.toFixed(2)}`;
 
@@ -94,37 +94,38 @@ fetch(locRequest).then(response => {
 
                         request = new Request(weatherRequestUrl);
                         return fetch(request).then(response => {
-                            if (response != undefined) {        //DarkSky response header doesn't contain status
+                            if (response != undefined) {
+                                //DarkSky response header doesn't contain status
                                 response.json().then(json => {
-                                    document.getElementById("temp").innerHTML =
+                                    document.getElementById("cur-temp").innerHTML =
                                         `${Math.round(json.currently.temperature)}\u2103`;
-                                    document.getElementById("precip").innerHTML = 
+                                    document.getElementById("cur-precip").innerHTML = 
                                         `${Math.round(json.currently.precipProbability * 100)} perc`
-                                    document.getElementById("pressure").innerHTML = `${parseFloat(
+                                    document.getElementById("cur-pressure").innerHTML = `${parseFloat(
                                         json.currently.pressure / 33.86).toFixed(2)} inhg`;
-                                    document.getElementById("humid").innerHTML =
+                                    document.getElementById("cur-humid").innerHTML =
                                         `${Math.round(json.currently.humidity * 100)} perc`;
-                                    document.getElementById("wind").innerHTML = `${parseFloat(
-                                        json.currently.windSpeed)}&nbsp;&nbsp;mph`;
-                                    document.getElementById("windIcon").innerHTML =
+                                    document.getElementById("cur-wind").innerHTML = `${parseFloat(
+                                        json.currently.windSpeed)} mph`;
+                                    document.getElementById("cur-wind-icon").innerHTML =
                                         `<i class="wi wi-wind from-${json.currently.windBearing
                                         }-deg"></i>`;
-                                    document.getElementById("time").innerHTML =
+                                    document.getElementById("update-time").innerHTML =
                                         `${printTimeFromUnix(json.currently.time)}`;
-                                    document.getElementById("icon").innerHTML =
+                                    document.getElementById("cur-icon").innerHTML =
                                         `<i class="wi wi-forecast-io-${json.currently.icon}"></i>`;
 
                                     var i;
                                     for(i = 1; i <= 5; i++) {
                                         var prefix = json.daily.data;
 
-                                        document.getElementById(`day${i}Icon`).innerHTML =
+                                        document.getElementById(`day-${i}-icon`).innerHTML =
                                             `<i class="wi wi-forecast-io-${prefix[i].icon}"></i>`;
-                                        document.getElementById(`day${i}Date`).innerHTML =
+                                        document.getElementById(`day-${i}-date`).innerHTML =
                                             printDateFromUnix(prefix[i].time);
-                                        document.getElementById(`day${i}High`).innerHTML =
+                                        document.getElementById(`day-${i}-high`).innerHTML =
                                             `${Math.round(prefix[i].temperatureHigh)}&deg;`;
-                                        document.getElementById(`day${i}Low`).innerHTML =
+                                        document.getElementById(`day-${i}-low`).innerHTML =
                                             `${Math.round(prefix[i].temperatureLow)}&deg;`;
                                     }
                                 });

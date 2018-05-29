@@ -3,12 +3,42 @@ body {
     color: #ffffff;
 }
 
-#icon {
-    font-size: 100px;
+.day-icon {
+    font-size: 48px;
 }
 
-#name {
-    font-size: 28px;
+.day-temp {
+    font-size: 24px;
+}
+
+.high {
     font-weight: bold;
 }
 
+.low {
+    font-weight: lighter;
+}
+
+#cur-icon {
+    font-size: 100px;
+}
+
+#cur-temp {
+    font-size: 64px;
+    line-height: 64px;
+}
+
+#cur-wind-icon {
+    font-size: 32px;
+}
+
+#city-coords {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+#city-name {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: bold;
+}
