@@ -4,21 +4,21 @@ body {
 }
 
 .cur-day-info {
-    font-size: 0.9vw;
+    font-size: 2.0vw;
     line-height: 110%;
 }
 
 .cur-day-info-min {
-    font-size: 0.7vw;
+    font-size: 1.3vw;
     line-height: 120%;
 }
 
 .daily-date {
-  font-size: 0.8vw;
+    font-size: 1.8vw;
 }
 
 .day-icon {
-    font-size: 2vw;
+    font-size: 4.0vw;
     padding-left: 5px;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .day-temp {
-    font-size: 1vw;
+    font-size: 2.8vw;
     line-height: 110%;
     padding-right: 5px;
 }
@@ -55,8 +55,8 @@ body {
 }
 
 .widget-ext {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 .widget-int {
@@ -64,20 +64,106 @@ body {
 }
 
 .widget-title {
-    font-size: 1.5vw;
+    font-size: 3.4vw;
     line-height: 100%;
     font-weight: bold;
 }
 
 .widget-main {
-    font-size: 5vw;
+    font-size: 10vw;
+    line-height: 120%;
 }
 
-#cur-temp {
-    font-size: 3vw;
+.widget-sub {
+    font-size: 7vw;
     line-height: 110%;
 }
 
+#current-weather {
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
 #cur-wind-icon {
-    font-size: 1.2vw;
+    font-size: 2.8vw;
+}
+
+#eth-top {
+    padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .cur-day-info {
+        font-size: 1.2vw;
+    }
+
+    .cur-day-info-min {
+        font-size: 0.8vw;
+    }
+
+    .daily-date {
+        font-size: 1.0vw;
+    }
+
+    .day-icon {
+        font-size: 2.7vw;
+    }
+
+    .day-temp {
+        font-size: 1.5vw;
+    }
+
+    .widget-main {
+        font-size: 6vw;
+    }
+
+    .widget-title {
+        font-size: 1.8vw;
+    }
+
+    .widget-sub {
+        font-size: 4vw;
+    }
+
+    #cur-wind-icon {
+        font-size: 1.6vw;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cur-day-info {
+        font-size: 0.9vw;
+    }
+
+    .cur-day-info-min {
+        font-size: 0.7vw;
+    }
+
+    .daily-date {
+        font-size: 0.8vw;
+    }
+
+    .day-icon {
+        font-size: 2vw;
+    }
+
+    .day-temp {
+        font-size: 1vw;
+    }
+
+    .widget-main {
+        font-size: 5vw;
+    }
+    
+    .widget-title {
+        font-size: 1.4vw;
+    }
+
+    .widget-sub {
+        font-size: 3vw;
+    }
+
+    #cur-wind-icon {
+        font-size: 1.2vw;
+    }
 }
