@@ -15,9 +15,12 @@ function getCardinalDir(deg) {
     return directions[index];
 }
 
-function getCityAndState(json) {
+function getCityAndState(url) {
     var city, state, c, t;
     var prefix = json.results[0];
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function()
 
     for (c in prefix.address_components) {
         var cPrefix = prefix.address_components[c];
@@ -32,6 +35,24 @@ function getCityAndState(json) {
     }
 
     return `${city}, ${state}`;
+}
+
+function getLocation(nextFunc) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        JSON.parse(this.responseText).then(json => {
+            var mapsRequestUrl = `${mapsUrl}latlng=${json.location.lat},${json.location.lng}&key=${
+                googleMapsApiKey}`;
+            
+            nextFunc(mapsRequestUrl)
+        });
+    } else {
+        throw new Error("Unable to contact Google Geolocation API");
+    }
+
+    locRequest.open("POST", locUrl, true);
+    locRequest.send();
 }
 
 function printTimeFromUnix(unixTime) {
