@@ -17,38 +17,50 @@ function getCardinalDir(deg) {
 
 function getCityAndState(url) {
     var city, state, c, t;
-    var prefix = json.results[0];
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function()
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            JSON.parse(this.responseText).then(json => {
+                var prefix = json.results[0];
 
-    for (c in prefix.address_components) {
-        var cPrefix = prefix.address_components[c];
+                for (c in prefix.address_components) {
+                    var cPrefix = prefix.address_components[c];
 
-        for (t in cPrefix.types) {
-            if (cPrefix.types[t] === "locality" && city === undefined) {
-                city = cPrefix.short_name;
-            } else if (cPrefix.types[t] === "administrative_area_level_1" && state === undefined) {
-                state = cPrefix.short_name;
-            }
+                    for (t in cPrefix.types) {
+                        if (cPrefix.types[t] === "locality" && city === undefined) {
+
+                            city = cPrefix.short_name;
+
+                        } else if (cPrefix.types[t] === "administrative_area_level_1" &&
+                            state === undefined) {
+
+                            state = cPrefix.short_name;
+                        }
+                    }
+                }
+                document.getElementById("city-name").innerHTML = `${city}, ${state}`;
+            });
         }
     }
-
-    return `${city}, ${state}`;
 }
 
 function getLocation(nextFunc) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        JSON.parse(this.responseText).then(json => {
-            var mapsRequestUrl = `${mapsUrl}latlng=${json.location.lat},${json.location.lng}&key=${
-                googleMapsApiKey}`;
-            
-            nextFunc(mapsRequestUrl)
-        });
-    } else {
-        throw new Error("Unable to contact Google Geolocation API");
+        if (this.readyState == 4 && this.status == 200) {
+            JSON.parse(this.responseText).then(json => {
+
+                var mapsRequestUrl = `${mapsUrl}latlng=${json.location.lat},${json.location.lng}` +
+                    `&key=${googleMapsApiKey}`;
+                document.getElementById("city-coords").innerHTML = `Lat: ${json.location.lat}, ` +
+                    `Long: ${json.location.lng}`;
+
+                nextFunc(mapsRequestUrl)
+            });
+        } else {
+            throw new Error("Unable to contact Google Geolocation API");
+        }
     }
 
     locRequest.open("POST", locUrl, true);
@@ -87,6 +99,9 @@ function printDateFromUnix(unixTime) {
 
     return `${month}/${day}`;
 }
+
+/* Start of program */
+getLocation(getCityAndState);
 
 var loc;
 var weatherRequestUrl;
