@@ -15,62 +15,103 @@ function getCardinalDir(deg) {
     return directions[index];
 }
 
-function getCityAndState(url) {
+function getCityAndState(coords) {
     var city, state, c, t;
+    var url = `${mapsUrl}latlng=${coords}&key=${googleMapsApiKey}`;
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            JSON.parse(this.responseText).then(json => {
-                var prefix = json.results[0];
+            var json = JSON.parse(this.responseText);
+            var prefix = json.results[0];
 
-                for (c in prefix.address_components) {
-                    var cPrefix = prefix.address_components[c];
+            for (c in prefix.address_components) {
+                var cPrefix = prefix.address_components[c];
 
-                    for (t in cPrefix.types) {
-                        if (cPrefix.types[t] === "locality" && city === undefined) {
+                for (t in cPrefix.types) {
+                    if (cPrefix.types[t] === "locality" && city === undefined) {
 
-                            city = cPrefix.short_name;
+                        city = cPrefix.short_name;
 
-                        } else if (cPrefix.types[t] === "administrative_area_level_1" &&
-                            state === undefined) {
+                    } else if (cPrefix.types[t] === "administrative_area_level_1" &&
+                        state === undefined) {
 
-                            state = cPrefix.short_name;
-                        }
+                        state = cPrefix.short_name;
                     }
                 }
-                document.getElementById("city-name").innerHTML = `${city}, ${state}`;
-            });
+            }
+            document.getElementById("city-name").innerHTML = `${city}, ${state}`;
+            getWeather(coords);
         }
     }
+    xhttp.open("POST", url, true);
+    xhttp.send();
 }
 
-function getLocation(nextFunc) {
+function getLocation(coords) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            JSON.parse(this.responseText).then(json => {
+            var json = JSON.parse(this.responseText);
+            var coords = `${json.location.lat},${json.location.lng}`; 
+            document.getElementById("city-coords").innerHTML = 
+                `Lat: ${json.location.lat.toFixed(2)}, Long: ${json.location.lng.toFixed(2)}`;
 
-                var mapsRequestUrl = `${mapsUrl}latlng=${json.location.lat},${json.location.lng}` +
-                    `&key=${googleMapsApiKey}`;
-                document.getElementById("city-coords").innerHTML = `Lat: ${json.location.lat}, ` +
-                    `Long: ${json.location.lng}`;
-
-                nextFunc(mapsRequestUrl)
-            });
-        } else {
-            throw new Error("Unable to contact Google Geolocation API");
+            getCityAndState(coords);
         }
     }
 
-    locRequest.open("POST", locUrl, true);
-    locRequest.send();
+    xhttp.open("POST", locUrl, true);
+    xhttp.send();
+}
+
+function getWeather(coords) {
+    var url = `${weatherUrl}${coords}`;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            document.getElementById("cur-temp").innerHTML = 
+                `${Math.round(json.currently.temperature)}\u2103`;
+            document.getElementById("cur-precip").innerHTML = 
+                `${Math.round(json.currently.precipProbability * 100)} perc`
+            document.getElementById("cur-pressure").innerHTML = 
+                `${parseFloat(json.currently.pressure / 33.86).toFixed(2)} inhg`;
+            document.getElementById("cur-humid").innerHTML =
+                `${Math.round(json.currently.humidity * 100)} perc`;
+            document.getElementById("cur-wind").innerHTML = 
+                `${parseFloat(json.currently.windSpeed)} mph`;
+            document.getElementById("cur-wind-icon").innerHTML =
+                `<i class="wi wi-wind from-${json.currently.windBearing}-deg"></i>`;
+            document.getElementById("update-time").innerHTML =
+                `${printTimeFromUnix(json.currently.time)}`;
+            document.getElementById("cur-icon").innerHTML =
+                `<i class="wi wi-forecast-io-${json.currently.icon}"></i>`;
+
+            var i;
+            for(i = 1; i <= 5; i++) {
+                var prefix = json.daily.data;
+
+                document.getElementById(`day-${i}-icon`).innerHTML =
+                    `<i class="wi wi-forecast-io-${prefix[i].icon}"></i>`;
+                document.getElementById(`day-${i}-date`).innerHTML =
+                    printDateFromUnix(prefix[i].time);
+                document.getElementById(`day-${i}-high`).innerHTML =
+                    `${Math.round(prefix[i].temperatureHigh)}&deg;`;
+                document.getElementById(`day-${i}-low`).innerHTML =
+                    `${Math.round(prefix[i].temperatureLow)}&deg;`;
+            }
+        }
+    }
+
+    xhttp.open("GET", url, true);
+    xhttp.send();
 }
 
 function printTimeFromUnix(unixTime) {
     var date = new Date(unixTime * 1000);
     var timeOfDay;
-    var hour = date.getHours() + (date.getTimezoneOffset() / 60) - 5;
+    var hour = date.getHours();
     var min = String(date.getMinutes());
 
     if (min.length < 2) {
@@ -93,7 +134,7 @@ function printTimeFromUnix(unixTime) {
 }
 
 function printDateFromUnix(unixTime) {
-    var date = new Date(unixTime * 1000 + 86400000);
+    var date = new Date(unixTime * 1000);
     var day = date.getDate();
     var month = date.getMonth() + 1;
 
@@ -101,9 +142,10 @@ function printDateFromUnix(unixTime) {
 }
 
 /* Start of program */
-getLocation(getCityAndState);
+var coords;
+getLocation(coords);
 
-var loc;
+/* var loc;
 var weatherRequestUrl;
 var mapsRequestUrl;
 
@@ -133,38 +175,7 @@ fetch(locRequest).then(response => {
                             if (response != undefined) {
                                 //DarkSky response header doesn't contain status
                                 response.json().then(json => {
-                                    document.getElementById("cur-temp").innerHTML =
-                                        `${Math.round(json.currently.temperature)}\u2103`;
-                                    document.getElementById("cur-precip").innerHTML = 
-                                        `${Math.round(json.currently.precipProbability * 100)} perc`
-                                    document.getElementById("cur-pressure").innerHTML = `${parseFloat(
-                                        json.currently.pressure / 33.86).toFixed(2)} inhg`;
-                                    document.getElementById("cur-humid").innerHTML =
-                                        `${Math.round(json.currently.humidity * 100)} perc`;
-                                    document.getElementById("cur-wind").innerHTML = `${parseFloat(
-                                        json.currently.windSpeed)} mph`;
-                                    document.getElementById("cur-wind-icon").innerHTML =
-                                        `<i class="wi wi-wind from-${json.currently.windBearing
-                                        }-deg"></i>`;
-                                    document.getElementById("update-time").innerHTML =
-                                        `${printTimeFromUnix(json.currently.time)}`;
-                                    document.getElementById("cur-icon").innerHTML =
-                                        `<i class="wi wi-forecast-io-${json.currently.icon}"></i>`;
-
-                                    var i;
-                                    for(i = 1; i <= 5; i++) {
-                                        var prefix = json.daily.data;
-
-                                        document.getElementById(`day-${i}-icon`).innerHTML =
-                                            `<i class="wi wi-forecast-io-${prefix[i].icon}"></i>`;
-                                        document.getElementById(`day-${i}-date`).innerHTML =
-                                            printDateFromUnix(prefix[i].time);
-                                        document.getElementById(`day-${i}-high`).innerHTML =
-                                            `${Math.round(prefix[i].temperatureHigh)}&deg;`;
-                                        document.getElementById(`day-${i}-low`).innerHTML =
-                                            `${Math.round(prefix[i].temperatureLow)}&deg;`;
-                                    }
-                                });
+                                                                   });
                             } else {
                                 throw new Error('Unable to contact DarkSky API');
                             }
@@ -178,4 +189,4 @@ fetch(locRequest).then(response => {
     } else {
         throw new Error('Unable to contact Google Geolocation API');
     }
-});
+}); */
