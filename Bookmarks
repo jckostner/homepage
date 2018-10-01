@@ -1,0 +1,712 @@
+{
+   "checksum": "2e58c22316885c274a9c8d4a9c15070c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13157760393174179",
+               "id": "54",
+               "meta_info": {
+                  "last_visited_desktop": "13178156803936168"
+               },
+               "name": "MyEtherWallet.com",
+               "sync_transaction_version": "10142",
+               "type": "url",
+               "url": "https://www.myetherwallet.com/"
+            }, {
+               "date_added": "13157874970057569",
+               "id": "57",
+               "meta_info": {
+                  "last_visited": "13177880482152920",
+                  "last_visited_desktop": "13182842751069438"
+               },
+               "name": "Ethereum Price",
+               "sync_transaction_version": "14552",
+               "type": "url",
+               "url": "https://ethereumprice.org/"
+            }, {
+               "date_added": "13157760407792630",
+               "id": "55",
+               "meta_info": {
+                  "last_visited_desktop": "13175833892604681"
+               },
+               "name": "Balances - ethermine.org - The fastest way to mine Ether",
+               "sync_transaction_version": "8702",
+               "type": "url",
+               "url": "https://ethermine.org/miners/A178B759dEA4Cf0EC0ba36F6Af64cFe3653BE169"
+            }, {
+               "date_added": "13159386926025909",
+               "id": "59",
+               "meta_info": {
+                  "last_visited_desktop": "13178156901902983"
+               },
+               "name": "Coinbase",
+               "sync_transaction_version": "10145",
+               "type": "url",
+               "url": "https://www.coinbase.com/dashboard"
+            } ],
+            "date_added": "13157760390396508",
+            "date_modified": "13177880493846492",
+            "id": "53",
+            "name": "Crypto",
+            "sync_transaction_version": "52",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13169708231131603",
+               "id": "113",
+               "meta_info": {
+                  "last_visited_desktop": "13181765224137382"
+               },
+               "name": "7 Deadly Sins Videos",
+               "sync_transaction_version": "13806",
+               "type": "url",
+               "url": "http://watch7deadlysins2.net/"
+            }, {
+               "date_added": "13169708131186625",
+               "id": "109",
+               "meta_info": {
+                  "last_visited_desktop": "13182655537513009"
+               },
+               "name": "Hulu",
+               "sync_transaction_version": "14503",
+               "type": "url",
+               "url": "https://www.hulu.com/"
+            }, {
+               "date_added": "13169708141709428",
+               "id": "110",
+               "meta_info": {
+                  "last_visited_desktop": "13182409919597312"
+               },
+               "name": "Netflix",
+               "sync_transaction_version": "14341",
+               "type": "url",
+               "url": "https://www.netflix.com/"
+            }, {
+               "date_added": "13169708179625202",
+               "id": "111",
+               "meta_info": {
+                  "last_visited_desktop": "13182238067549309"
+               },
+               "name": "Twitch",
+               "sync_transaction_version": "14254",
+               "type": "url",
+               "url": "https://www.twitch.tv/"
+            }, {
+               "date_added": "13169708196378447",
+               "id": "112",
+               "meta_info": {
+                  "last_visited_desktop": "13182677075870148"
+               },
+               "name": "Youtube",
+               "sync_transaction_version": "14508",
+               "type": "url",
+               "url": "https://www.youtube.com/"
+            } ],
+            "date_added": "13169708116058396",
+            "date_modified": "13177473776876691",
+            "id": "108",
+            "name": "Entertainment",
+            "sync_transaction_version": "665",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13169708295428646",
+               "id": "115",
+               "meta_info": {
+                  "last_visited_desktop": "13182842764536886"
+               },
+               "name": "Acorns",
+               "sync_transaction_version": "14554",
+               "type": "url",
+               "url": "https://www.acorns.com/"
+            }, {
+               "date_added": "13169708309930272",
+               "id": "116",
+               "meta_info": {
+                  "last_visited": "13182806989140680",
+                  "last_visited_desktop": "13182743989792251"
+               },
+               "name": "Amazon",
+               "sync_transaction_version": "14553",
+               "type": "url",
+               "url": "https://www.amazon.com/"
+            }, {
+               "date_added": "13169708331598735",
+               "id": "117",
+               "meta_info": {
+                  "last_visited_desktop": "13182654406595711"
+               },
+               "name": "Best Buy Credit Card",
+               "sync_transaction_version": "14496",
+               "type": "url",
+               "url": "https://citiretailservices.citibankonline.com/RSnextgen/svc/launch/index.action?siteId=PLCN_BESTBUY&langId=en_US&pagename=authenticate#dashboard"
+            }, {
+               "date_added": "13169708367526547",
+               "id": "118",
+               "meta_info": {
+                  "last_visited": "13182625392605588",
+                  "last_visited_desktop": "13182843026883870"
+               },
+               "name": "Best Buy MyHR",
+               "sync_transaction_version": "14555",
+               "type": "url",
+               "url": "https://hr.bestbuy.com/"
+            }, {
+               "date_added": "13169708402569819",
+               "id": "120",
+               "meta_info": {
+                  "last_visited_desktop": "13182843086678572"
+               },
+               "name": "Best Buy MyTLC",
+               "sync_transaction_version": "14557",
+               "type": "url",
+               "url": "http://mytlc.bestbuy.com/"
+            }, {
+               "date_added": "13169708423369970",
+               "id": "121",
+               "meta_info": {
+                  "last_visited_desktop": "13182843110351861"
+               },
+               "name": "Discover Card",
+               "sync_transaction_version": "14558",
+               "type": "url",
+               "url": "http://www.discover.com/"
+            }, {
+               "date_added": "13177801005101759",
+               "id": "139",
+               "meta_info": {
+                  "last_visited_desktop": "13179897172248992"
+               },
+               "name": "Good to Go! Pass",
+               "sync_transaction_version": "11787",
+               "type": "url",
+               "url": "https://mygoodtogo.com/olcsc/#!myAccountView"
+            }, {
+               "date_added": "13169708448050967",
+               "id": "122",
+               "meta_info": {
+                  "last_visited_desktop": "13175494788393855"
+               },
+               "name": "Google Fi",
+               "sync_transaction_version": "8460",
+               "type": "url",
+               "url": "http://fi.google.com/"
+            }, {
+               "date_added": "13169708484049136",
+               "id": "123",
+               "meta_info": {
+                  "last_visited_desktop": "13179629382121181"
+               },
+               "name": "KANZA Bank",
+               "sync_transaction_version": "11632",
+               "type": "url",
+               "url": "http://kanzabank.com/"
+            }, {
+               "date_added": "13169708511144032",
+               "id": "124",
+               "name": "K-State Credit Union",
+               "sync_transaction_version": "4077",
+               "type": "url",
+               "url": "https://www.kstatecu.com/"
+            }, {
+               "date_added": "13169708529849560",
+               "id": "125",
+               "meta_info": {
+                  "last_visited_desktop": "13176272807705433"
+               },
+               "name": "Mint Money Management",
+               "sync_transaction_version": "8957",
+               "type": "url",
+               "url": "http://www.mint.com/"
+            }, {
+               "date_added": "13169708540352153",
+               "id": "126",
+               "meta_info": {
+                  "last_visited": "13181847320998495",
+                  "last_visited_desktop": "13179441759901432"
+               },
+               "name": "Newegg",
+               "sync_transaction_version": "13961",
+               "type": "url",
+               "url": "http://newegg.com/"
+            }, {
+               "date_added": "13169708554144127",
+               "id": "127",
+               "meta_info": {
+                  "last_visited_desktop": "13182843236463907"
+               },
+               "name": "State Farm Insurance",
+               "sync_transaction_version": "14563",
+               "type": "url",
+               "url": "http://statefarm.com/"
+            } ],
+            "date_added": "13169708259829593",
+            "date_modified": "13182826399689785",
+            "id": "114",
+            "name": "Finances",
+            "sync_transaction_version": "688",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13169707773966144",
+               "id": "101",
+               "meta_info": {
+                  "last_visited": "13181890131040221",
+                  "last_visited_desktop": "13182843421242665"
+               },
+               "name": "Facebook",
+               "sync_transaction_version": "14569",
+               "type": "url",
+               "url": "https://www.facebook.com/"
+            }, {
+               "date_added": "13169707892057451",
+               "id": "104",
+               "meta_info": {
+                  "last_visited_desktop": "13182845095352792"
+               },
+               "name": "Github",
+               "sync_transaction_version": "14573",
+               "type": "url",
+               "url": "https://github.com/"
+            }, {
+               "date_added": "13169707601198479",
+               "id": "99",
+               "meta_info": {
+                  "last_visited_desktop": "13182549758682087"
+               },
+               "name": "Google Mail",
+               "sync_transaction_version": "14403",
+               "type": "url",
+               "url": "http://mail.google.com/"
+            }, {
+               "date_added": "13166473584421431",
+               "id": "84",
+               "name": "Hackr.io",
+               "sync_transaction_version": "653",
+               "type": "url",
+               "url": "https://hackr.io/"
+            }, {
+               "date_added": "13169707912438387",
+               "id": "105",
+               "meta_info": {
+                  "last_visited_desktop": "13177798095510338"
+               },
+               "name": "K-State KSIS",
+               "sync_transaction_version": "9798",
+               "type": "url",
+               "url": "http://ksis.k-state.edu/"
+            }, {
+               "date_added": "13169707955375496",
+               "id": "106",
+               "meta_info": {
+                  "last_visited_desktop": "13179520787775639"
+               },
+               "name": "K-State Online",
+               "sync_transaction_version": "11491",
+               "type": "url",
+               "url": "https://public.online.k-state.edu/"
+            }, {
+               "date_added": "13169707818251981",
+               "id": "102",
+               "meta_info": {
+                  "last_visited_desktop": "13182844460851558"
+               },
+               "name": "Reddit",
+               "sync_transaction_version": "14572",
+               "type": "url",
+               "url": "https://www.reddit.com/"
+            }, {
+               "date_added": "13169707837522143",
+               "id": "103",
+               "name": "Twitter",
+               "sync_transaction_version": "4064",
+               "type": "url",
+               "url": "https://twitter.com/"
+            }, {
+               "date_added": "13169708048720276",
+               "id": "107",
+               "meta_info": {
+                  "last_visited_desktop": "13182560362904051"
+               },
+               "name": "LinkedIn",
+               "sync_transaction_version": "14438",
+               "type": "url",
+               "url": "https://www.linkedin.com/"
+            } ],
+            "date_added": "13169707747321025",
+            "date_modified": "13182561750140860",
+            "id": "100",
+            "name": "Personal",
+            "sync_transaction_version": "648",
+            "type": "folder"
+         }, {
+            "date_added": "13175729119178701",
+            "id": "135",
+            "meta_info": {
+               "last_visited_desktop": "13175805836722744"
+            },
+            "name": "EFF Wordlist",
+            "sync_transaction_version": "8671",
+            "type": "url",
+            "url": "https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt"
+         }, {
+            "date_added": "13177497278668043",
+            "id": "137",
+            "meta_info": {
+               "last_visited_desktop": "13177573831997300"
+            },
+            "name": "Perfect Loop | A job for everyone.",
+            "sync_transaction_version": "9655",
+            "type": "url",
+            "url": "https://www.perfectloop.org/"
+         }, {
+            "children": [  ],
+            "date_added": "13182330005093116",
+            "date_modified": "13182330005093475",
+            "id": "153",
+            "name": "Apartments",
+            "sync_transaction_version": "14323",
+            "type": "folder"
+         } ],
+         "date_added": "13153015255676568",
+         "date_modified": "13177801005101759",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13079339269987767",
+            "id": "6",
+            "name": "I dislike 1 Square = 10ft maps, so I made my own Feathergale Spire. : dndnext",
+            "sync_transaction_version": "171",
+            "type": "url",
+            "url": "http://www.reddit.com/r/dndnext/comments/3aijot/i_dislike_1_square_10ft_maps_so_i_made_my_own/"
+         }, {
+            "date_added": "13079815434660927",
+            "id": "7",
+            "name": "Dungeon maps for RPG. Create maps online, download as PDF and PNG.",
+            "sync_transaction_version": "172",
+            "type": "url",
+            "url": "http://pyromancers.com/dungeon-painter-online/"
+         }, {
+            "children": [ {
+               "date_added": "13075401121000000",
+               "id": "9",
+               "name": "Tyrantus - NPC - World of Warcraft",
+               "sync_transaction_version": "173",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=20931/tyrantus"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "10",
+               "name": "Beryl Hound - NPC - World of Warcraft",
+               "sync_transaction_version": "174",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=25355/beryl-hound"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "11",
+               "name": "Snowfrolic Fox - NPC - World of Warcraft",
+               "sync_transaction_version": "175",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=49565/snowfrolic-fox"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "12",
+               "name": "Royal Teromoth - NPC - World of Warcraft",
+               "sync_transaction_version": "176",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=18469/royal-teromoth"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "13",
+               "name": "Netherskate - NPC - World of Warcraft",
+               "sync_transaction_version": "177",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=21901/netherskate"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "14",
+               "name": "Thornfang Ravager - NPC - World of Warcraft",
+               "sync_transaction_version": "178",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=19349/thornfang-ravager"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "15",
+               "name": "Fen Strider - NPC - World of Warcraft",
+               "sync_transaction_version": "179",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=18134/fen-strider"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "16",
+               "name": "Vilewing Chimaera - NPC - World of Warcraft",
+               "sync_transaction_version": "180",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=21879/vilewing-chimaera"
+            }, {
+               "date_added": "13075401121000000",
+               "id": "17",
+               "name": "Brokentoe - NPC - World of Warcraft",
+               "sync_transaction_version": "181",
+               "type": "url",
+               "url": "http://www.wowhead.com/npc=18398/brokentoe"
+            } ],
+            "date_added": "13153015398680774",
+            "date_modified": "13153015398680774",
+            "id": "8",
+            "name": "Hunter Pets",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13163750622806775",
+               "id": "65",
+               "name": "Academic OneFile - Document - The Future of Money: Bitcoin and Other Cryptocurrency Technologies Are a Way of Life in This Small Swiss Town; The town of 30,000 has attracted entrepreneurs who have created cryptocurrency startups",
+               "sync_transaction_version": "4088",
+               "type": "url",
+               "url": "http://go.galegroup.com.er.lib.k-state.edu/ps/i.do?&id=GALE|A498448476&v=2.1&u=ksu&it=r&p=AONE&sw=w&authCount=1"
+            }, {
+               "date_added": "13163750639556453",
+               "id": "67",
+               "name": "Blockchain Basics: A Non-Technical Introduction in 25 Steps: Proquest Tech & Business Books",
+               "sync_transaction_version": "4089",
+               "type": "url",
+               "url": "http://proquestcombo.safaribooksonline.com.er.lib.k-state.edu/9781484226049?uicode=ksu"
+            }, {
+               "date_added": "13163750642467249",
+               "id": "68",
+               "name": "LPgoWO18TCeMIggJVakt_tendermint.pdf",
+               "sync_transaction_version": "4053",
+               "type": "url",
+               "url": "https://cdn.relayto.com/media/files/LPgoWO18TCeMIggJVakt_tendermint.pdf"
+            }, {
+               "date_added": "13164130940175555",
+               "id": "76",
+               "name": "SmartPool",
+               "sync_transaction_version": "4101",
+               "type": "url",
+               "url": "https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-luu.pdf"
+            }, {
+               "date_added": "13164131770489133",
+               "id": "74",
+               "name": "A Survey of Attacks on Ethereum Smart Contracts (SoK) | SpringerLink",
+               "sync_transaction_version": "4093",
+               "type": "url",
+               "url": "https://link.springer.com/chapter/10.1007%2F978-3-662-54455-6_8"
+            }, {
+               "date_added": "13164131785460637",
+               "id": "75",
+               "name": "ethereum-yellowpaper.pdf",
+               "sync_transaction_version": "4047",
+               "type": "url",
+               "url": "http://www.cryptopapers.net/papers/ethereum-yellowpaper.pdf"
+            }, {
+               "date_added": "13165447237013644",
+               "id": "80",
+               "name": "replacing-paper-contracts.pdf",
+               "sync_transaction_version": "4094",
+               "type": "url",
+               "url": "https://wesleyegbertsen.nl/user/pages/03.mijn-werk/ethereum-onderzoek/replacing-paper-contracts.pdf"
+            }, {
+               "date_added": "13165522744133814",
+               "id": "82",
+               "name": "KrollDaveyFeltenWEIS2013.pdf",
+               "sync_transaction_version": "4049",
+               "type": "url",
+               "url": "http://www.econinfosec.org/archive/weis2013/papers/KrollDaveyFeltenWEIS2013.pdf"
+            }, {
+               "date_added": "13167940457070763",
+               "id": "89",
+               "name": "Ethereum ASICs Are Here: What the New Miners Mean and What's Next - CoinDesk",
+               "sync_transaction_version": "571",
+               "type": "url",
+               "url": "https://www.coindesk.com/ethereum-asics-means-whats-next/"
+            }, {
+               "date_added": "13167943277113317",
+               "id": "90",
+               "name": "bitcoin.pdf",
+               "sync_transaction_version": "4090",
+               "type": "url",
+               "url": "https://bitcoin.org/bitcoin.pdf"
+            }, {
+               "date_added": "13169505649478809",
+               "id": "96",
+               "name": "Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf",
+               "sync_transaction_version": "4102",
+               "type": "url",
+               "url": "https://www.weusecoins.com/assets/pdf/library/Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf"
+            }, {
+               "date_added": "13169675814543171",
+               "id": "98",
+               "name": "HackMiami-Analysis_of_the_Cryptocurrency_Marketplace.pdf",
+               "sync_transaction_version": "4050",
+               "type": "url",
+               "url": "http://www.hackmiami.org/whitepapers/HackMiami-Analysis_of_the_Cryptocurrency_Marketplace.pdf"
+            }, {
+               "date_added": "13169795036554943",
+               "id": "129",
+               "name": "Ethereum Block Difficulty Growth Chart",
+               "sync_transaction_version": "4092",
+               "type": "url",
+               "url": "https://etherscan.io/chart/difficulty"
+            }, {
+               "children": [ {
+                  "date_added": "13167088465404583",
+                  "id": "86",
+                  "name": "Asset Downloads",
+                  "sync_transaction_version": "4096",
+                  "type": "url",
+                  "url": "https://www.ethereum.org/assets"
+               } ],
+               "date_added": "13167088474237190",
+               "date_modified": "13167088474237747",
+               "id": "87",
+               "name": "Visual",
+               "sync_transaction_version": "1884",
+               "type": "folder"
+            } ],
+            "date_added": "13163750634837821",
+            "date_modified": "13170782934505972",
+            "id": "66",
+            "name": "Research",
+            "sync_transaction_version": "1882",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13168323659511039",
+               "id": "92",
+               "name": "Strategy Analytics Reports Explosive Smart Speaker Growth in Q4, 30 Million Units in 2017 - Voicebot",
+               "sync_transaction_version": "571",
+               "type": "url",
+               "url": "https://www.voicebot.ai/2018/02/27/strategy-analytics-reports-explosive-smart-speaker-growth-q4-30-million-units-2017/"
+            }, {
+               "date_added": "13168323750795469",
+               "id": "94",
+               "name": "Strategy Analytics: Explosive Growth for Smart Speakers Continues As Global Sales Top 18 Million Units in Q4 2017",
+               "sync_transaction_version": "4100",
+               "type": "url",
+               "url": "https://www.strategyanalytics.com/strategy-analytics/news/strategy-analytics-press-releases/strategy-analytics-press-release/2018/02/27/strategy-analytics-explosive-growth-for-smart-speakers-continues-as-global-sales-top-18-million-units-in-q4-2017?slid=446770&spg=3#.WtQboogbMkk"
+            }, {
+               "date_added": "13170373758760200",
+               "id": "131",
+               "name": "• IoT: number of connected devices worldwide 2012-2025 | Statista",
+               "sync_transaction_version": "4099",
+               "type": "url",
+               "url": "https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/"
+            } ],
+            "date_added": "13168323668760877",
+            "date_modified": "13170373778100925",
+            "id": "93",
+            "name": "490 Project",
+            "sync_transaction_version": "1883",
+            "type": "folder"
+         }, {
+            "date_added": "13162457905315018",
+            "id": "63",
+            "meta_info": {
+               "last_visited_desktop": "13181724315164346"
+            },
+            "name": "Hollister Co. | So Cal inspired clothing for Guys and Girls",
+            "sync_transaction_version": "13771",
+            "type": "url",
+            "url": "https://www.hollisterco.com/shop/us"
+         } ],
+         "date_added": "13153015255676573",
+         "date_modified": "13170782930093046",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "sync_transaction_version": "14573",
+      "synced": {
+         "children": [ {
+            "date_added": "13180423562775176",
+            "id": "141",
+            "meta_info": {
+               "last_visited": "13180423586059276",
+               "last_visited_desktop": "13181711932386347"
+            },
+            "name": "1 br, 1 bath Apartment - 650 Bellevue Way NE Rentals - Bellevue, WA | Apartments.com",
+            "sync_transaction_version": "13734",
+            "type": "url",
+            "url": "https://www.apartments.com/1-br-1-bath-apartment-650-bellevue-way-ne-bellevue-wa/t5h03d9/"
+         }, {
+            "date_added": "13180423636544950",
+            "id": "142",
+            "meta_info": {
+               "last_visited": "13180423636551905",
+               "last_visited_desktop": "13181711932391231"
+            },
+            "name": "1 br, 1 bath Apartment - 2911 2nd Ave Rentals - Seattle, WA | Apartments.com",
+            "sync_transaction_version": "13735",
+            "type": "url",
+            "url": "https://www.apartments.com/1-br-1-bath-apartment-2911-2nd-ave-seattle-wa/gyxg8ey/"
+         }, {
+            "date_added": "13180424445510118",
+            "id": "143",
+            "meta_info": {
+               "last_visited": "13180424445523199",
+               "last_visited_desktop": "13181711932396380"
+            },
+            "name": "Lake Washington Apts. For Rent in Seattle, WA - ForRent.com",
+            "sync_transaction_version": "13736",
+            "type": "url",
+            "url": "https://www.forrent.com/apartment-community-profile/1013128"
+         }, {
+            "date_added": "13180425441703261",
+            "id": "144",
+            "meta_info": {
+               "last_visited": "13180425441709594",
+               "last_visited_desktop": "13181711932401201"
+            },
+            "name": "Apartments For Rent in Seattle WA | Zillow",
+            "sync_transaction_version": "13741",
+            "type": "url",
+            "url": "https://www.zillow.com/homedetails/1141-N-91st-St-204-Seattle-WA-98103/2087977135_zpid/"
+         }, {
+            "date_added": "13180425788374534",
+            "id": "145",
+            "meta_info": {
+               "last_visited": "13180425788388393",
+               "last_visited_desktop": "13181711932406146"
+            },
+            "name": "Apartments For Rent in Seattle WA | Zillow",
+            "sync_transaction_version": "13743",
+            "type": "url",
+            "url": "https://www.zillow.com/homedetails/Boylston-Ave-E-Seattle-WA-98102/2088108428_zpid/"
+         }, {
+            "date_added": "13180425959602069",
+            "id": "146",
+            "meta_info": {
+               "last_visited": "13180425959608714",
+               "last_visited_desktop": "13181711932411209"
+            },
+            "name": "Apartments For Rent in Seattle WA | Zillow",
+            "sync_transaction_version": "13742",
+            "type": "url",
+            "url": "https://www.zillow.com/homedetails/2200-E-Union-St-411-Seattle-WA-98122/2089768842_zpid/"
+         }, {
+            "date_added": "13180492481496415",
+            "id": "148",
+            "meta_info": {
+               "last_visited": "13180492481506653",
+               "last_visited_desktop": "13181711932416289"
+            },
+            "name": "Monster Hunter: World mod adds damage breakdowns for you and your team | PC Gamer",
+            "sync_transaction_version": "13740",
+            "type": "url",
+            "url": "https://www-pcgamer-com.cdn.ampproject.org/v/s/www.pcgamer.com/amp/monster-hunter-world-mod-adds-damage-breakdowns-for-you-and-your-team/?amp_js_v=a2&amp_gsa=1#amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fwww.pcgamer.com%2Fmonster-hunter-world-mod-adds-damage-breakdowns-for-you-and-your-team%2F"
+         } ],
+         "date_added": "13153015255676574",
+         "date_modified": "13180492481496415",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
